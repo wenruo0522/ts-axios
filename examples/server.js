@@ -12,9 +12,13 @@ const compile = webpack(webpackConfig)
 const router = express.Router()
 
 router.get('/simple/get', (req, res) => {
-    res.json({
-      msg: `hello world`
-    })
+  res.json({
+    msg: `hello world`
+  })
+})
+
+router.get('/base/get', (req, res) => {
+  res.json(req.query)
 })
 
 app.use(router)
