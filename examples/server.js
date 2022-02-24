@@ -38,7 +38,7 @@ router.post('/base/buffer', (req, res) => {
   })
 })
 
-app.use(router)
+
 
 app.use(webpackDevMiddleware(compile, {
   publicPath: '/__build__/',
@@ -54,6 +54,7 @@ app.use(express.static(__dirname))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+app.use(router)
 
 const port = process.env.PORT || 8080
 
