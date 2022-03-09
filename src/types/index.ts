@@ -77,6 +77,6 @@ export interface ResolvedFn<T=any> {
   (val: T): T | Promise<T>
 }
 
-export interface RejectedFn<T=any> {
+export interface RejectedFn {
   (error: any): any
 }
