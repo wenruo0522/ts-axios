@@ -19,6 +19,7 @@ registerErrorRouter()
 
 registerExtendRouter()
 
+registerInterceptorRouter()
 
 app.use(webpackDevMiddleware(compile, {
   publicPath: '/__build__/',
@@ -136,6 +137,11 @@ function registerExtendRouter() {
     })
   })
 
+}
 
+function registerInterceptorRouter() {
+  router.get('/interceptor/get', (req, res) => {
+    res.end("hello")
+  })
 }
 
