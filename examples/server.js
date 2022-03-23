@@ -21,6 +21,8 @@ registerExtendRouter()
 
 registerInterceptorRouter()
 
+registerConfigRouter()
+
 app.use(webpackDevMiddleware(compile, {
   publicPath: '/__build__/',
   stats: {
@@ -145,3 +147,8 @@ function registerInterceptorRouter() {
   })
 }
 
+function registerConfigRouter() {
+  router.post("/config/post", (req, res) => {
+    res.json(req.body)
+  })
+}
