@@ -59,3 +59,4 @@ export function flattenHeaders(headers: any, method: Method): any {
   })
   return headers
 }
+
